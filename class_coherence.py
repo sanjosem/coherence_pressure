@@ -210,7 +210,7 @@ class coherence:
         toc = gt() - tic
         print('compute length scale with avg in csd - ',toc,'[s]')
         tic = gt()
-        lz_meth2 = 0.5*mean(fft(coh_nosqrt,axis=1),axis=(1,3)).real * delta_z
+        lz_meth2 = 0.5*mean(fft(coh_nosqrt,axis=2),axis=(1,3)).real * delta_z
         toc = gt() - tic
         print('compute length scale with avg at end - ',toc,'[s]')
         self.span_coh['lz_meth1'] = lz_meth1
